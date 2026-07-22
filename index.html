@@ -3,241 +3,419 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hebei Xiaozhong Machinery | Professional Used Excavators & Parts</title>
+    <title>Xiaozhong Machinery | Premier Excavator Remanufacturing Factory</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
-        body { font-family: 'Inter', sans-serif; }
-        .bg-industrial { background-color: #1a202c; }
-        .text-accent { color: #f6ad55; }
-        .border-accent { border-color: #f6ad55; }
-        .btn-primary { @apply bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 px-4 rounded transition duration-300; }
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        .bg-industrial-dark { background-color: #0f172a; }
+        .text-accent { color: #f97316; }
+        .bg-accent { background-color: #f97316; }
+        .border-accent { border-color: #f97316; }
+        
+        /* Custom Glassmorphism */
+        .glass-header {
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+
+        /* Hero Video Overlay */
+        .hero-overlay {
+            background: linear-gradient(to right, rgba(15, 23, 42, 0.9) 30%, rgba(15, 23, 42, 0.2) 100%);
+        }
+
+        .product-card:hover .product-img { transform: scale(1.05); }
+        .btn-fancy { @apply relative overflow-hidden bg-orange-600 text-white px-8 py-4 rounded-lg font-bold transition-all duration-300 hover:bg-orange-700 hover:shadow-2xl hover:-translate-y-1 active:scale-95; }
+        
+        /* Stats section gradient */
+        .stats-bg { background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); }
+
+        /* Factory Slider Styles - Advanced "Full Content" Mode */
+        .factory-slide { display: none; background-color: #f1f5f9; }
+        .factory-slide.active { display: block; position: relative; height: 100%; width: 100%; overflow: hidden; }
+        
+        /* Blurred Background */
+        .slide-bg-blur {
+            position: absolute;
+            inset: -20px;
+            background-size: cover;
+            background-position: center;
+            filter: blur(30px) brightness(0.9);
+            opacity: 0.4;
+            z-index: 1;
+        }
+
+        /* Main Image */
+        .factory-slide img.main-img {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            height: 100%;
+            object-fit: contain; /* Shows full image without cropping */
+            padding: 20px;
+        }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-900">
+<body class="bg-slate-50 text-slate-900">
 
     <!-- Header -->
-    <header class="bg-industrial text-white sticky top-0 z-50 shadow-lg">
-        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <div class="flex items-center space-x-3">
-                <img src="https://sc02.alicdn.com/kf/Hcc27cb44f93c4410a6467fd62beae20dn.jpg" alt="Logo" class="h-12 w-12 rounded-full border-2 border-accent object-contain bg-white p-1">
-                <span class="text-xl font-bold tracking-tight uppercase">Xiaozhong Machinery</span>
-            </div>
-            <nav class="hidden md:flex space-x-8 text-sm font-semibold uppercase tracking-widest">
-                <a href="#home" class="hover:text-accent">Home</a>
-                <a href="#inventory" class="hover:text-accent">Inventory</a>
-                <a href="#parts" class="hover:text-accent">Parts</a>
-                <a href="#about" class="hover:text-accent">About Us</a>
-                <a href="#contact" class="hover:text-accent">Contact</a>
-            </nav>
+    <header class="glass-header text-white fixed w-full z-50 border-b border-white/10">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
             <div class="flex items-center space-x-4">
-                <a href="tel:+8617736229310" class="text-accent font-bold"><i class="fas fa-phone mr-2"></i>Contact Us</a>
+                <img src="https://sc02.alicdn.com/kf/Hcc27cb44f93c4410a6467fd62beae20dn.jpg" alt="Xiaozhong Logo" class="h-10 w-10 rounded-full border border-orange-500/50 bg-white p-0.5 object-contain">
+                <div>
+                    <h1 class="text-lg font-black tracking-tighter uppercase leading-none">Xiaozhong</h1>
+                    <p class="text-[10px] text-orange-500 font-bold tracking-[0.2em] uppercase leading-none mt-1">Machinery Factory</p>
+                </div>
+            </div>
+            <nav class="hidden lg:flex space-x-10 text-xs font-bold uppercase tracking-widest text-slate-300">
+                <a href="#home" class="hover:text-orange-500 transition-colors">Home</a>
+                <a href="#inventory" class="hover:text-orange-500 transition-colors">Inventory</a>
+                <a href="#parts" class="hover:text-orange-500 transition-colors">Parts</a>
+                <a href="#factory" class="hover:text-orange-500 transition-colors">Factory</a>
+                <a href="#faq" class="hover:text-orange-500 transition-colors">FAQ</a>
+                <a href="#about" class="hover:text-orange-500 transition-colors">About</a>
+            </nav>
+            <div class="flex items-center space-x-6">
+                <a href="https://wa.me/8619803129650" class="hidden sm:block text-orange-500 font-extrabold text-sm"><i class="fab fa-whatsapp mr-2"></i>LIVE INQUIRY</a>
+                <button class="lg:hidden text-white text-2xl"><i class="fas fa-bars"></i></button>
             </div>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section id="home" class="relative bg-industrial text-white py-24 overflow-hidden">
-        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
-            <div class="md:w-1/2 mb-12 md:mb-0 z-10">
-                <h1 class="text-5xl md:text-6xl font-extrabold leading-tight mb-6">
-                    Reliable <span class="text-accent">Used Excavators</span> Direct from Factory
-                </h1>
-                <p class="text-xl text-gray-400 mb-8 max-w-lg">
-                    15%-40% lower prices than traders. Complete industrial chain factory since 2006. Quality guaranteed.
+    <section id="home" class="relative h-screen flex items-center overflow-hidden bg-industrial-dark">
+        <div id="hero-slider" class="absolute inset-0 w-full h-full">
+            <div class="hero-slide absolute inset-0 w-full h-full transition-opacity duration-1000 opacity-100">
+                <img src="assets/images/hero/slide0.png" alt="Slide 0" class="w-full h-full object-cover opacity-60">
+            </div>
+            <div class="hero-slide absolute inset-0 w-full h-full transition-opacity duration-1000 opacity-0">
+                <img src="assets/images/hero/slide1.png" alt="Slide 1" class="w-full h-full object-cover opacity-60">
+            </div>
+            <div class="hero-slide absolute inset-0 w-full h-full transition-opacity duration-1000 opacity-0">
+                <img src="assets/images/hero/slide2.png" alt="Slide 2" class="w-full h-full object-cover opacity-60">
+            </div>
+            <div class="hero-slide absolute inset-0 w-full h-full transition-opacity duration-1000 opacity-0">
+                <img src="assets/images/hero/slide3.png" alt="Slide 3" class="w-full h-full object-cover opacity-60">
+            </div>
+            <div class="hero-slide absolute inset-0 w-full h-full transition-opacity duration-1000 opacity-0">
+                <img src="assets/images/hero/slide4.png" alt="Slide 4" class="w-full h-full object-cover opacity-60">
+            </div>
+        </div>
+        <div class="absolute inset-0 hero-overlay"></div>
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="max-w-3xl">
+                <span class="inline-block px-3 py-1 bg-orange-500 text-white text-[10px] font-black tracking-[0.3em] uppercase rounded mb-6">Established 2006</span>
+                <h2 class="text-6xl md:text-8xl font-black text-white leading-[0.9] mb-8 tracking-tighter">
+                    THE <span class="text-orange-500">POWER</span> OF REMANUFACTURING.
+                </h2>
+                <p class="text-lg md:text-xl text-slate-300 mb-10 max-w-xl leading-relaxed font-light">
+                    Direct factory source for premium used excavators. Save <span class="text-white font-bold">15-40%</span> without compromising on quality or performance.
                 </p>
-                <div class="flex space-x-4">
-                    <a href="#inventory" class="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-lg font-bold text-lg transition shadow-xl">View Inventory</a>
-                    <a href="#about" class="border border-white hover:bg-white hover:text-industrial px-8 py-4 rounded-lg font-bold text-lg transition">Learn More</a>
-                </div>
-            </div>
-            <div class="md:w-1/2 relative">
-                <!-- Placeholder for Hero Image -->
-                <div class="bg-gray-800 rounded-2xl w-full h-80 md:h-96 flex items-center justify-center border-2 border-dashed border-gray-600">
-                    <i class="fas fa-tractor text-gray-700 text-9xl"></i>
-                    <p class="absolute bottom-4 text-gray-500 italic">Professional Equipment Showcase</p>
-                </div>
-            </div>
-        </div>
-        <!-- Decorative background elements -->
-        <div class="absolute top-0 right-0 -mt-20 -mr-20 w-96 h-96 bg-orange-500 rounded-full opacity-10 blur-3xl"></div>
-    </section>
-
-    <!-- Features -->
-    <section class="py-16 bg-white">
-        <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
-                <div class="flex flex-col items-center text-center p-6 rounded-xl hover:shadow-2xl transition group">
-                    <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mb-6 group-hover:bg-orange-500 transition">
-                        <i class="fas fa-industry text-orange-500 text-2xl group-hover:text-white"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-4 uppercase tracking-tighter">Factory Direct</h3>
-                    <p class="text-gray-600">No middlemen. Direct delivery from our Baoding factory saves you 15%-40%.</p>
-                </div>
-                <div class="flex flex-col items-center text-center p-6 rounded-xl hover:shadow-2xl transition group">
-                    <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mb-6 group-hover:bg-orange-500 transition">
-                        <i class="fas fa-check-shield text-orange-500 text-2xl group-hover:text-white"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-4 uppercase tracking-tighter">Quality Assurance</h3>
-                    <p class="text-gray-600">6 months or 2500 hours warranty for excavators. Professional inspection reports provided.</p>
-                </div>
-                <div class="flex flex-col items-center text-center p-6 rounded-xl hover:shadow-2xl transition group">
-                    <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mb-6 group-hover:bg-orange-500 transition">
-                        <i class="fas fa-ship text-orange-500 text-2xl group-hover:text-white"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-4 uppercase tracking-tighter">Global Logistics</h3>
-                    <p class="text-gray-600">RORO, Container, and Bulk shipping solutions to 50+ countries worldwide.</p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 items-center">
+                    <a href="#inventory" class="btn-fancy text-center w-full sm:w-auto">BROWSE INVENTORY</a>
+                    <button onclick="window.open('https://youtu.be/hck8qHgo6Eg')" class="group flex items-center space-x-3 px-8 py-4 text-white font-bold transition-all">
+                        <span class="w-12 h-12 flex items-center justify-center rounded-full border border-white/30 group-hover:bg-orange-500 group-hover:border-orange-500 transition-all">
+                            <i class="fas fa-play text-xs ml-1"></i>
+                        </span>
+                        <span class="text-xs tracking-widest uppercase">Watch Factory Video</span>
+                    </button>
                 </div>
             </div>
         </div>
+        <div class="absolute bottom-10 right-10 z-20 flex space-x-4">
+            <button onclick="prevSlide()" class="w-12 h-12 border border-white/20 rounded-full flex items-center justify-center text-white hover:bg-orange-600 hover:border-orange-600 transition-all">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button onclick="nextSlide()" class="w-12 h-12 border border-white/20 rounded-full flex items-center justify-center text-white hover:bg-orange-600 hover:border-orange-600 transition-all">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
     </section>
 
-    <!-- Inventory -->
-    <section id="inventory" class="py-20 bg-gray-50">
-        <div class="container mx-auto px-4">
-            <div class="flex justify-between items-end mb-12">
+    <!-- Trust Stats -->
+    <section class="stats-bg py-16 border-y border-white/5">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-12">
+                <div class="text-center">
+                    <div class="text-5xl font-black text-white mb-2 tracking-tighter">18+</div>
+                    <div class="text-orange-500 text-[10px] font-bold tracking-[0.2em] uppercase">Years Industry Experience</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-5xl font-black text-white mb-2 tracking-tighter">50+</div>
+                    <div class="text-orange-500 text-[10px] font-bold tracking-[0.2em] uppercase">Global Countries Served</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-5xl font-black text-white mb-2 tracking-tighter">1000+</div>
+                    <div class="text-orange-500 text-[10px] font-bold tracking-[0.2em] uppercase">Machines Sold Annually</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-5xl font-black text-white mb-2 tracking-tighter">24H</div>
+                    <div class="text-orange-500 text-[10px] font-bold tracking-[0.2em] uppercase">Professional Tech Support</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Advantages -->
+    <section class="py-24 bg-white relative">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row items-end justify-between mb-20">
+                <div class="max-w-2xl">
+                    <h3 class="text-orange-500 text-xs font-black tracking-[0.3em] uppercase mb-4">Core Advantages</h3>
+                    <h2 class="text-4xl md:text-5xl font-black tracking-tighter leading-none">WHY PROFESSIONALS CHOOSE <br>XIAOZHONG MACHINERY?</h2>
+                </div>
+                <p class="text-slate-500 max-w-sm mt-6 lg:mt-0 text-sm italic">"Integrating maintenance, disassembly, and remanufacturing into one complete industrial chain."</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="p-10 bg-slate-50 rounded-2xl border border-slate-100 hover:border-orange-200 transition-all duration-500 group text-center">
+                    <div class="w-14 h-14 bg-white shadow-lg rounded-xl flex items-center justify-center mb-8 mx-auto group-hover:bg-orange-600 transition-colors duration-500">
+                        <i class="fas fa-industry text-orange-600 text-xl group-hover:text-white"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-4 uppercase tracking-tighter">Factory Direct</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed">Save 15-40% by cutting out middlemen with our complete industrial chain.</p>
+                </div>
+                <div class="p-10 bg-slate-50 rounded-2xl border border-slate-100 hover:border-orange-200 transition-all duration-500 group text-center">
+                    <div class="w-14 h-14 bg-white shadow-lg rounded-xl flex items-center justify-center mb-8 mx-auto group-hover:bg-orange-600 transition-colors duration-500">
+                        <i class="fas fa-shield-alt text-orange-600 text-xl group-hover:text-white"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-4 uppercase tracking-tighter">12-Month Warranty</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed">Every excavator undergoes a 120-point inspection and comes with a 12 month-warranty.</p>
+                </div>
+                <div class="p-10 bg-slate-50 rounded-2xl border border-slate-100 hover:border-orange-200 transition-all duration-500 group text-center">
+                    <div class="w-14 h-14 bg-white shadow-lg rounded-xl flex items-center justify-center mb-8 mx-auto group-hover:bg-orange-600 transition-colors duration-500">
+                        <i class="fas fa-box text-orange-600 text-xl group-hover:text-white"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-4 uppercase tracking-tighter">In-Stock Ready</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed">All listed machines are physically in our yard, ready for immediate delivery.</p>
+                </div>
+                <div class="p-10 bg-slate-50 rounded-2xl border border-slate-100 hover:border-orange-200 transition-all duration-500 group text-center">
+                    <div class="w-14 h-14 bg-white shadow-lg rounded-xl flex items-center justify-center mb-8 mx-auto group-hover:bg-orange-600 transition-colors duration-500">
+                        <i class="fas fa-eye text-orange-600 text-xl group-hover:text-white"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-4 uppercase tracking-tighter">On-Site Inspection</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed">We welcome customers to visit our factory and inspect machine conditions personally.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Inventory Grid -->
+    <section id="inventory" class="py-24 bg-slate-100">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row md:items-center justify-between mb-16">
                 <div>
-                    <h2 class="text-3xl font-extrabold mb-2 uppercase tracking-tighter border-l-4 border-orange-500 pl-4">Featured Inventory</h2>
-                    <p class="text-gray-600">Top quality used machines ready for deployment</p>
+                    <h2 class="text-4xl font-black tracking-tighter uppercase mb-2">Full Inventory (50+ Units)</h2>
+                    <p class="text-slate-500 text-sm font-medium">Genuine remanufactured machines from top global brands.</p>
                 </div>
-                <div class="flex space-x-2">
-                    <button class="px-4 py-2 bg-white border rounded hover:bg-gray-100">Caterpillar</button>
-                    <button class="px-4 py-2 bg-white border rounded hover:bg-gray-100">Komatsu</button>
-                    <button class="px-4 py-2 bg-white border rounded hover:bg-gray-100">Hyundai</button>
+                <div class="mt-8 md:mt-0 flex flex-wrap gap-2">
+                    <button onclick="filterBrand('ALL')" class="px-5 py-2 bg-orange-600 text-white border border-orange-600 rounded-full text-xs font-bold transition">ALL</button>
+                    <button onclick="filterBrand('Caterpillar')" class="px-5 py-2 bg-white border border-slate-200 rounded-full text-xs font-bold hover:border-orange-500 hover:text-orange-500 transition">CATERPILLAR</button>
+                    <button onclick="filterBrand('Komatsu')" class="px-5 py-2 bg-white border border-slate-200 rounded-full text-xs font-bold hover:border-orange-500 hover:text-orange-500 transition">KOMATSU</button>
+                    <button onclick="filterBrand('SANY')" class="px-5 py-2 bg-white border border-slate-200 rounded-full text-xs font-bold hover:border-orange-500 hover:text-orange-500 transition">SANY</button>
+                    <button onclick="filterBrand('Hitachi')" class="px-5 py-2 bg-white border border-slate-200 rounded-full text-xs font-bold hover:border-orange-500 hover:text-orange-500 transition">HITACHI</button>
+                    <button onclick="filterBrand('Volvo')" class="px-5 py-2 bg-white border border-slate-200 rounded-full text-xs font-bold hover:border-orange-500 hover:text-orange-500 transition">VOLVO</button>
                 </div>
             </div>
-            
-            <div id="product-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <!-- Products will be injected here -->
-            </div>
-            
-            <div class="mt-12 text-center">
-                <button class="bg-industrial text-white px-8 py-3 rounded font-bold hover:bg-gray-800 transition">View Full Catalog (50+ Units)</button>
+            <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8"></div>
+            <div class="mt-20 text-center">
+                <button id="load-more-btn" onclick="renderProducts()" class="px-10 py-4 bg-industrial-dark text-white font-black text-xs tracking-widest rounded-lg hover:bg-slate-800 transition uppercase shadow-xl">Load Full Inventory</button>
             </div>
         </div>
     </section>
 
-    <!-- Parts -->
-    <section id="parts" class="py-20 bg-white">
-        <div class="container mx-auto px-4">
-            <div class="flex flex-col md:flex-row items-center">
-                <div class="md:w-1/2 mb-10 md:mb-0">
-                    <h2 class="text-3xl font-extrabold mb-6 uppercase tracking-tighter border-l-4 border-orange-500 pl-4">High-Performance Parts</h2>
-                    <p class="text-lg text-gray-700 mb-6">
-                        We provide complete engines and hydraulic components for CAT, Doosan, Volvo, and Cummins.
+    <!-- Parts Spotlight -->
+    <section id="parts" class="py-24 bg-industrial-dark text-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row items-center gap-16">
+                <div class="lg:w-1/2">
+                    <h3 class="text-orange-500 text-xs font-black tracking-[0.3em] uppercase mb-4">Genuine Components</h3>
+                    <h2 class="text-4xl md:text-6xl font-black tracking-tighter leading-none mb-8">HIGH-PERFORMANCE <br>SPARE PARTS.</h2>
+                    <p class="text-slate-400 mb-10 text-lg font-light leading-relaxed">
+                        We specialize in genuine used engines and hydraulic components for CAT, Doosan, Volvo, and Cummins. Tested and ready for shipment.
                     </p>
-                    <ul class="space-y-4 mb-8">
-                        <li class="flex items-center"><i class="fas fa-check-circle text-orange-500 mr-3"></i> Genuine Used Engines</li>
-                        <li class="flex items-center"><i class="fas fa-check-circle text-orange-500 mr-3"></i> 1 Month Warranty on Parts</li>
-                        <li class="flex items-center"><i class="fas fa-check-circle text-orange-500 mr-3"></i> Global Fast Shipping</li>
+                    <ul class="grid grid-cols-2 gap-6 mb-12">
+                        <li class="flex items-center text-sm font-bold"><i class="fas fa-microchip text-orange-500 mr-3"></i> ECU & Electronics</li>
+                        <li class="flex items-center text-sm font-bold"><i class="fas fa-gears text-orange-500 mr-3"></i> Hydraulic Pumps</li>
+                        <li class="flex items-center text-sm font-bold"><i class="fas fa-cogs text-orange-500 mr-3"></i> Final Drives</li>
+                        <li class="flex items-center text-sm font-bold"><i class="fas fa-ring text-orange-500 mr-3"></i> Swing Bearings</li>
                     </ul>
-                    <a href="#contact" class="btn-primary">Inquiry for Parts</a>
+                    <a href="https://wa.me/8619803129650" class="btn-fancy">REQUEST QUOTATION</a>
                 </div>
-                <div class="md:w-1/2 grid grid-cols-2 gap-4">
-                    <div class="bg-gray-100 p-6 rounded-lg text-center">
-                        <i class="fas fa-engine text-gray-400 text-4xl mb-4"></i>
-                        <h4 class="font-bold">Engines</h4>
+                <div class="lg:w-1/2 grid grid-cols-2 gap-6">
+                    <div class="aspect-square relative overflow-hidden rounded-2xl border border-white/5 group">
+                        <img src="assets/images/parts/engine.jpg" alt="Engines" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black/40 flex flex-col items-center justify-center">
+                            <i class="fas fa-engine text-4xl text-white mb-4"></i>
+                            <span class="font-bold text-xs tracking-widest uppercase">Engines</span>
+                        </div>
                     </div>
-                    <div class="bg-gray-100 p-6 rounded-lg text-center">
-                        <i class="fas fa-cogs text-gray-400 text-4xl mb-4"></i>
-                        <h4 class="font-bold">Hydraulics</h4>
+                    <div class="aspect-square relative overflow-hidden rounded-2xl border border-white/5 group">
+                        <img src="assets/images/parts/pump.jpg" alt="Hydraulics" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black/40 flex flex-col items-center justify-center">
+                            <i class="fas fa-cogs text-4xl text-white mb-4"></i>
+                            <span class="font-bold text-xs tracking-widest uppercase">Hydraulics</span>
+                        </div>
                     </div>
-                    <div class="bg-gray-100 p-6 rounded-lg text-center">
-                        <i class="fas fa-track text-gray-400 text-4xl mb-4"></i>
-                        <h4 class="font-bold">Undercarriage</h4>
+                    <div class="aspect-square relative overflow-hidden rounded-2xl border border-white/5 group">
+                        <img src="assets/images/parts/final_drive.jpg" alt="Undercarriage" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black/40 flex flex-col items-center justify-center">
+                            <i class="fas fa-link text-4xl text-white mb-4"></i>
+                            <span class="font-bold text-xs tracking-widest uppercase">Undercarriage</span>
+                        </div>
                     </div>
-                    <div class="bg-gray-100 p-6 rounded-lg text-center">
-                        <i class="fas fa-box text-gray-400 text-4xl mb-4"></i>
-                        <h4 class="font-bold">Buckets</h4>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Us -->
-    <section id="about" class="py-24 bg-industrial text-white">
-        <div class="container mx-auto px-4">
-            <div class="max-w-4xl mx-auto text-center">
-                <h2 class="text-4xl font-extrabold mb-8 text-accent italic uppercase tracking-widest">ABOUT XIAOZHONG</h2>
-                <p class="text-xl leading-relaxed text-gray-300 mb-12">
-                    Founded in 2006, Hebei Xiaozhong Machinery Manufacturing Co., Ltd. has grown from a local maintenance shop to a global leader in excavator remanufacturing. We own the complete industrial chain—from disassembly to spare parts restoration.
-                </p>
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
-                    <div>
-                        <div class="text-4xl font-bold text-accent mb-2">18+</div>
-                        <div class="text-gray-400 uppercase text-xs tracking-widest">Years Experience</div>
-                    </div>
-                    <div>
-                        <div class="text-4xl font-bold text-accent mb-2">50+</div>
-                        <div class="text-gray-400 uppercase text-xs tracking-widest">Countries Served</div>
-                    </div>
-                    <div>
-                        <div class="text-4xl font-bold text-accent mb-2">1000+</div>
-                        <div class="text-gray-400 uppercase text-xs tracking-widest">Annual Sales</div>
-                    </div>
-                    <div>
-                        <div class="text-4xl font-bold text-accent mb-2">24/7</div>
-                        <div class="text-gray-400 uppercase text-xs tracking-widest">Tech Support</div>
+                    <div class="aspect-square relative overflow-hidden rounded-2xl border border-white/5 group">
+                        <img src="assets/images/parts/bucket.jpg" alt="Buckets" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black/40 flex flex-col items-center justify-center">
+                            <i class="fas fa-archive text-4xl text-white mb-4"></i>
+                            <span class="font-bold text-xs tracking-widest uppercase">Buckets</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact -->
-    <section id="contact" class="py-20 bg-white">
-        <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+    <!-- Factory Experience Slider -->
+    <section id="factory" class="py-24 bg-white overflow-hidden">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+                <div class="relative group">
+                    <div id="factory-slider" class="relative h-[500px] overflow-hidden rounded-3xl shadow-2xl">
+                        <!-- Slide 1 -->
+                        <div class="factory-slide active">
+                            <div class="slide-bg-blur" style="background-image: url('assets/images/factory/factory2.jpg')"></div>
+                            <img src="assets/images/factory/factory2.jpg" alt="Factory 2" class="main-img">
+                        </div>
+                        <!-- Slide 2 -->
+                        <div class="factory-slide">
+                            <div class="slide-bg-blur" style="background-image: url('assets/images/factory/factory3.jpg')"></div>
+                            <img src="assets/images/factory/factory3.jpg" alt="Factory 3" class="main-img">
+                        </div>
+                        <!-- Slide 3 -->
+                        <div class="factory-slide">
+                            <div class="slide-bg-blur" style="background-image: url('assets/images/factory/factory4.jpg')"></div>
+                            <img src="assets/images/factory/factory4.jpg" alt="Factory 4" class="main-img">
+                        </div>
+                        <!-- Slide 4 -->
+                        <div class="factory-slide">
+                            <div class="slide-bg-blur" style="background-image: url('assets/images/factory/factory5.jpg')"></div>
+                            <img src="assets/images/factory/factory5.jpg" alt="Factory 5" class="main-img">
+                        </div>
+                        
+                        <!-- Slider Controls -->
+                        <div class="absolute bottom-6 right-6 flex space-x-2 z-30">
+                            <button onclick="changeFactorySlide(-1)" class="w-12 h-12 bg-black/50 backdrop-blur-md rounded-full flex items-center justify-center text-white hover:bg-orange-600 transition-all border border-white/20">
+                                <i class="fas fa-chevron-left text-xs"></i>
+                            </button>
+                            <button onclick="changeFactorySlide(1)" class="w-12 h-12 bg-black/50 backdrop-blur-md rounded-full flex items-center justify-center text-white hover:bg-orange-600 transition-all border border-white/20">
+                                <i class="fas fa-chevron-right text-xs"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="absolute -bottom-6 -left-6 bg-industrial-dark p-6 rounded-2xl shadow-2xl z-20 border border-white/10 hidden sm:block">
+                        <p class="text-white text-2xl font-black tracking-tighter leading-none mb-1">30,000 m²</p>
+                        <p class="text-orange-500 text-[8px] font-bold tracking-widest uppercase">Manufacturing Base</p>
+                    </div>
+                </div>
                 <div>
-                    <h2 class="text-3xl font-extrabold mb-8 uppercase tracking-tighter border-l-4 border-orange-500 pl-4">Contact Us</h2>
-                    <p class="text-gray-600 mb-8">Ready to purchase or need a quote? Contact our professional sales team today.</p>
+                    <h3 class="text-orange-500 text-xs font-black tracking-[0.3em] uppercase mb-4">The Xiaozhong Edge</h3>
+                    <h2 class="text-4xl md:text-5xl font-black tracking-tighter leading-[0.9] mb-8">FACTORY SOURCE <br>IS THE BEST SOURCE.</h2>
+                    <p class="text-slate-600 mb-8 leading-relaxed">
+                        Unlike brokers, we own the workshops. Our integrated industrial chain covers the entire lifecycle of construction machinery—ensuring that every part is inspected and every machine is restored to peak performance.
+                    </p>
                     <div class="space-y-6">
-                        <div class="flex items-start">
-                            <i class="fab fa-whatsapp text-2xl text-green-500 mr-4 mt-1"></i>
+                        <div class="flex items-start space-x-4">
+                            <div class="w-6 h-6 rounded-full bg-orange-100 flex items-center justify-center mt-1"><i class="fas fa-check text-orange-600 text-[10px]"></i></div>
                             <div>
-                                <h4 class="font-bold">WhatsApp</h4>
-                                <p class="text-gray-600">+177 3622 9310</p>
-                                <p class="text-gray-600">+86 180 0322 8982</p>
-                                <p class="text-gray-600">+86 191 3320 0711</p>
-                                <p class="text-gray-600">+198 0312 9650</p>
+                                <h5 class="font-bold text-lg leading-none mb-1">In-house Maintenance Team</h5>
+                                <p class="text-slate-500 text-xs">50+ certified engineers specializing in engine and hydraulic restoration.</p>
                             </div>
                         </div>
-                        <div class="flex items-start">
-                            <i class="fab fa-weixin text-2xl text-green-600 mr-4 mt-1"></i>
+                        <div class="flex items-start space-x-4">
+                            <div class="w-6 h-6 rounded-full bg-orange-100 flex items-center justify-center mt-1"><i class="fas fa-check text-orange-600 text-[10px]"></i></div>
                             <div>
-                                <h4 class="font-bold">WeChat</h4>
-                                <p class="text-gray-600">+86 199 1212 9996</p>
-                                <p class="text-gray-600">+86 180 0322 8982</p>
-                                <p class="text-gray-600">+86 191 3320 0711</p>
-                                <p class="text-gray-600">+198 0312 9650</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start">
-                            <i class="fas fa-map-marker-alt text-2xl text-red-500 mr-4 mt-1"></i>
-                            <div>
-                                <h4 class="font-bold">Factory Address</h4>
-                                <p class="text-gray-600">Xushui District, Baoding, Hebei, China</p>
+                                <h5 class="font-bold text-lg leading-none mb-1">Global Part Supply Chain</h5>
+                                <p class="text-slate-500 text-xs">Access to genuine spare parts for CAT, Komatsu, and all major brands.</p>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-24 bg-slate-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-black tracking-tighter uppercase mb-16 text-center">Frequently Asked Questions</h2>
+            <div class="max-w-4xl mx-auto space-y-12">
+                <img src="assets/images/faq/FAQ1.png" alt="FAQ 1" class="w-full rounded-2xl shadow-lg border border-slate-200">
+                <img src="assets/images/faq/FAQ2.png" alt="FAQ 2" class="w-full rounded-2xl shadow-lg border border-slate-200">
+                <img src="assets/images/faq/FAQ3.png" alt="FAQ 3" class="w-full rounded-2xl shadow-lg border border-slate-200">
+            </div>
+        </div>
+    </section>
+
+    <!-- Global Contact Matrix -->
+    <section id="contact" class="py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-20">
                 <div>
-                    <form class="space-y-4 bg-gray-50 p-8 rounded-xl shadow-inner border border-gray-200">
+                    <h2 class="text-4xl font-black tracking-tighter uppercase mb-6">GLOBAL CONTACT MATRIX</h2>
+                    <p class="text-slate-500 mb-12">Connect with our regional managers via WhatsApp or WeChat for instant response.</p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-10">
                         <div>
-                            <label class="block text-sm font-bold mb-2">Name</label>
-                            <input type="text" class="w-full px-4 py-2 border rounded focus:ring-2 focus:ring-orange-500 outline-none" placeholder="Your Name">
+                            <div class="flex items-center mb-6">
+                                <i class="fab fa-whatsapp text-2xl text-green-500 mr-3"></i>
+                                <h4 class="font-black text-xs tracking-widest uppercase">WhatsApp</h4>
+                            </div>
+                            <ul class="space-y-4 text-sm font-medium text-slate-600">
+                                <li class="pb-4 border-b border-slate-200">+86 198 0312 9650</li>
+                                <li class="pb-4 border-b border-slate-200">+86 177 3622 9310</li>
+                                <li class="pb-4 border-b border-slate-200">+86 180 0322 8982</li>
+                                <li class="pb-4 border-b border-slate-200">+86 191 3320 0711</li>
+                            </ul>
                         </div>
                         <div>
-                            <label class="block text-sm font-bold mb-2">Email / Phone</label>
-                            <input type="text" class="w-full px-4 py-2 border rounded focus:ring-2 focus:ring-orange-500 outline-none" placeholder="Your Contact Info">
+                            <div class="flex items-center mb-6">
+                                <i class="fab fa-weixin text-2xl text-green-600 mr-3"></i>
+                                <h4 class="font-black text-xs tracking-widest uppercase">WeChat</h4>
+                            </div>
+                            <ul class="space-y-4 text-sm font-medium text-slate-600">
+                                <li class="pb-4 border-b border-slate-200">+86 199 1212 9996</li>
+                                <li class="pb-4 border-b border-slate-200">+86 180 0322 8982</li>
+                                <li class="pb-4 border-b border-slate-200">+86 191 3320 0711</li>
+                                <li class="pb-4 border-b border-slate-200">+86 198 0312 9650</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-slate-50 p-10 rounded-3xl shadow-xl border border-slate-100">
+                    <h3 class="text-2xl font-black mb-8 tracking-tighter uppercase">QUICK INQUIRY</h3>
+                    <form class="space-y-6">
+                        <div class="grid grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-[10px] font-black uppercase tracking-widest text-slate-400 mb-2">Name</label>
+                                <input type="text" class="w-full px-5 py-4 bg-white border border-slate-100 rounded-xl focus:outline-none focus:ring-2 focus:ring-orange-500 transition">
+                            </div>
+                            <div>
+                                <label class="block text-[10px] font-black uppercase tracking-widest text-slate-400 mb-2">Company</label>
+                                <input type="text" class="w-full px-5 py-4 bg-white border border-slate-100 rounded-xl focus:outline-none focus:ring-2 focus:ring-orange-500 transition">
+                            </div>
                         </div>
                         <div>
-                            <label class="block text-sm font-bold mb-2">Message</label>
-                            <textarea class="w-full px-4 py-2 border rounded h-32 focus:ring-2 focus:ring-orange-500 outline-none" placeholder="Model or parts you are interested in..."></textarea>
+                            <label class="block text-[10px] font-black uppercase tracking-widest text-slate-400 mb-2">Email or Phone (WhatsApp)</label>
+                            <input type="text" class="w-full px-5 py-4 bg-white border border-slate-100 rounded-xl focus:outline-none focus:ring-2 focus:ring-orange-500 transition">
                         </div>
-                        <button type="submit" class="w-full btn-primary py-3">Send Inquiry</button>
+                        <div>
+                            <label class="block text-[10px] font-black uppercase tracking-widest text-slate-400 mb-2">Message</label>
+                            <textarea class="w-full px-5 py-4 bg-white border border-slate-100 rounded-xl h-32 focus:outline-none focus:ring-2 focus:ring-orange-500 transition" placeholder="Tell us which models or parts you need..."></textarea>
+                        </div>
+                        <button class="w-full btn-fancy">SEND SECURE MESSAGE</button>
                     </form>
                 </div>
             </div>
@@ -245,14 +423,12 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-industrial text-gray-500 py-12 border-t border-gray-800">
-        <div class="container mx-auto px-4 text-center">
-            <p class="mb-4">&copy; 2026 Hebei Xiaozhong Machinery Manufacturing Co., Ltd. All rights reserved.</p>
-            <div class="flex justify-center space-x-6">
-                <a href="#" class="hover:text-white transition"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" class="hover:text-white transition"><i class="fab fa-twitter"></i></a>
-                <a href="#" class="hover:text-white transition"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#" class="hover:text-white transition"><i class="fab fa-youtube"></i></a>
+    <footer class="bg-industrial-dark text-slate-500 py-16 border-t border-white/5">
+        <div class="container mx-auto px-6 text-center">
+            <h4 class="text-white font-black text-xl tracking-tighter uppercase mb-2">Xiaozhong Machinery</h4>
+            <p class="text-xs uppercase tracking-widest font-bold mb-8">The Standard in Remanufacturing</p>
+            <div class="mt-12 pt-12 border-t border-white/5 text-[10px] font-bold tracking-widest uppercase">
+                &copy; 2026 HEBEI XIAOZHONG MACHINERY MANUFACTURING CO., LTD. ALL RIGHTS RESERVED.
             </div>
         </div>
     </footer>
@@ -260,32 +436,56 @@
     <!-- Scripts -->
     <script src="assets/js/data.js"></script>
     <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.hero-slide');
+        function showSlide(index) { slides.forEach((slide, i) => { slide.style.opacity = (i === index) ? '1' : '0'; }); }
+        function nextSlide() { currentSlide = (currentSlide + 1) % slides.length; showSlide(currentSlide); }
+        function prevSlide() { currentSlide = (currentSlide - 1 + slides.length) % slides.length; showSlide(currentSlide); }
+        setInterval(nextSlide, 5000);
+
+        let currentFactorySlide = 0;
+        const factorySlides = document.querySelectorAll('.factory-slide');
+        function showFactorySlide(index) { factorySlides.forEach((slide, i) => { if (i === index) { slide.classList.add('active'); slide.style.opacity = '1'; } else { slide.classList.remove('active'); slide.style.opacity = '0'; } }); }
+        function changeFactorySlide(step) { currentFactorySlide = (currentFactorySlide + step + factorySlides.length) % factorySlides.length; showFactorySlide(currentFactorySlide); }
+
         const grid = document.getElementById('product-grid');
-        
-        productData.excavators.forEach(item => {
-            const card = document.createElement('div');
-            card.className = "bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 border border-gray-100 group";
-            card.innerHTML = `
-                <div class="relative h-48 bg-gray-200 overflow-hidden">
-                    <img src="${item.image}" alt="${item.model}" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
-                    <div class="absolute top-2 right-2 bg-orange-500 text-white text-xs font-bold px-2 py-1 rounded">
-                        ${item.year}
+        let currentFilter = 'ALL';
+        function filterBrand(brand) { currentFilter = brand; renderProducts(8); }
+
+        function renderProducts(limit = null) {
+            grid.innerHTML = '';
+            let list = productData.excavators;
+            if (currentFilter !== 'ALL') { list = list.filter(item => item.brand.toUpperCase() === currentFilter.toUpperCase()); }
+            const displayList = limit ? list.slice(0, limit) : list;
+            displayList.forEach(item => {
+                const card = document.createElement('div');
+                card.className = "product-card bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-2xl border border-slate-100 transition-all duration-500 group";
+                card.innerHTML = `
+                    <div class="relative h-56 bg-slate-200 overflow-hidden">
+                        <img src="${item.image}" alt="${item.model}" class="product-img w-full h-full object-cover transition duration-700" onerror="this.src='https://via.placeholder.com/600x400?text=${item.brand}+${item.model}'">
+                        <div class="absolute top-4 left-4">
+                            <span class="bg-industrial-dark/80 backdrop-blur-md text-white text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-widest border border-white/10">
+                                ${item.year} MODEL
+                            </span>
+                        </div>
                     </div>
-                </div>
-                <div class="p-4">
-                    <h3 class="font-bold text-lg mb-1">${item.brand} ${item.model}</h3>
-                    <div class="flex justify-between text-xs text-gray-500 mb-3 uppercase tracking-widest">
-                        <span><i class="fas fa-clock mr-1"></i> ${item.hours}h</span>
-                        <span><i class="fas fa-weight mr-1"></i> ${item.weight}</span>
-                    </div>
-                    <div class="border-t pt-3 flex justify-between items-center">
-                        <span class="text-orange-600 font-extrabold text-xl italic">$${item.price.toLocaleString()}</span>
-                        <button class="bg-gray-800 text-white text-xs px-3 py-2 rounded font-bold hover:bg-orange-500 transition">DETAILS</button>
-                    </div>
-                </div>
-            `;
-            grid.appendChild(card);
-        });
+                    <div class="p-6">
+                        <h3 class="font-black text-xl mb-1 tracking-tighter uppercase group-hover:text-orange-600 transition-colors">${item.brand} ${item.model}</h3>
+                        <div class="flex space-x-4 text-[10px] font-black text-slate-400 uppercase tracking-widest mb-6">
+                            <span><i class="fas fa-history text-orange-500 mr-1.5"></i>${item.hours}H</span>
+                            <span><i class="fas fa-weight-hanging text-orange-500 mr-1.5"></i>${item.weight}</span>
+                        </div>
+                        <div class="flex items-center justify-between border-t border-slate-50 pt-5">
+                            <div><p class="text-[9px] font-black text-slate-400 uppercase tracking-widest leading-none mb-1">Price from</p><span class="text-2xl font-black text-industrial-dark tracking-tighter">$${item.price.toLocaleString()}</span></div>
+                            <a href="https://wa.me/8619803129650" class="w-10 h-10 bg-slate-100 rounded-full flex items-center justify-center hover:bg-orange-600 hover:text-white transition-all duration-300"><i class="fas fa-arrow-right text-xs"></i></a>
+                        </div>
+                    </div>`;
+                grid.appendChild(card);
+            });
+            const loadMoreBtn = document.getElementById('load-more-btn');
+            if (limit && list.length > limit) { loadMoreBtn.style.display = 'inline-block'; } else { loadMoreBtn.style.display = 'none'; }
+        }
+        renderProducts(8);
     </script>
 </body>
 </html>
