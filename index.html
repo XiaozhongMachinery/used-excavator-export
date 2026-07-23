@@ -57,9 +57,9 @@
             padding: 20px;
         }
 
-        /* Hero Image Vertical Adjustment - Move up to reduce top whitespace */
+        /* Hero Image Vertical Adjustment - Adjusted as requested for even less top whitespace */
         .hero-slide img {
-            object-position: 50% 25% !important;
+            object-position: 50% 10% !important;
         }
 
         /* FAQ Tab Styles */
@@ -240,60 +240,101 @@
     <!-- Parts Spotlight -->
     <section id="parts" class="py-24 bg-industrial-dark text-white">
         <div class="container mx-auto px-6">
-            <div class="flex flex-col lg:flex-row items-center gap-16">
-                <div class="lg:w-1/2">
-                    <h3 class="text-orange-500 text-xs font-black tracking-[0.3em] uppercase mb-4">Genuine Components</h3>
-                    <h2 class="text-4xl md:text-6xl font-black tracking-tighter leading-none mb-8">HIGH-PERFORMANCE <br>SPARE PARTS.</h2>
-                    <p class="text-slate-400 mb-10 text-lg font-light leading-relaxed">
-                        We specialize in genuine used engines and hydraulic components for CAT, Doosan, Volvo, Cummins, Hitachi, Kubota, Komatsu, Sany, Hyundai, Isuzu, and Mitsubishi.
-                    </p>
-                    <ul class="grid grid-cols-1 gap-4 mb-12">
-                        <li class="flex items-center text-sm font-bold"><i class="fas fa-check text-orange-500 mr-3"></i> Worldwide Express Shipping</li>
-                        <li class="flex items-center text-sm font-bold"><i class="fas fa-check text-orange-500 mr-3"></i> Genuine Refurbished Quality</li>
-                        <li class="flex items-center text-sm font-bold"><i class="fas fa-check text-orange-500 mr-3"></i> Technical Support & Warranty</li>
-                    </ul>
+            <div class="mb-20">
+                <h3 class="text-orange-500 text-xs font-black tracking-[0.3em] uppercase mb-4">Genuine Components</h3>
+                <h2 class="text-4xl md:text-6xl font-black tracking-tighter leading-none mb-8">HIGH-PERFORMANCE <br>SPARE PARTS.</h2>
+                <p class="text-slate-400 mb-10 text-lg font-light leading-relaxed max-w-4xl">
+                    We specialize in genuine used engines and hydraulic components for Caterpillar, Doosan, Volvo, and Cummins. Our inventory also covers major brands including Hitachi, Kubota, Komatsu, Sany, Hyundai, Isuzu, and Mitsubishi.
+                </p>
+            </div>
+
+            <!-- Standard Parts Grid -->
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-4 mb-20">
+                <div class="aspect-square relative overflow-hidden rounded-xl border border-white/5 group">
+                    <img src="assets/images/parts/engine.jpg" alt="Engines" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black/40 flex flex-col items-center justify-center p-2 text-center">
+                        <span class="font-bold text-[10px] tracking-widest uppercase">Engines</span>
+                    </div>
                 </div>
-                <div class="lg:w-1/2 grid grid-cols-2 sm:grid-cols-3 gap-4">
-                    <div class="aspect-square relative overflow-hidden rounded-xl border border-white/5 group">
-                        <img src="assets/images/parts/engine.jpg" alt="Engines" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                        <div class="absolute inset-0 bg-black/40 flex flex-col items-center justify-center p-2 text-center">
-                            <i class="fas fa-engine text-2xl text-white mb-2"></i>
-                            <span class="font-bold text-[10px] tracking-widest uppercase">Engines</span>
+                <div class="aspect-square relative overflow-hidden rounded-xl border border-white/5 group">
+                    <img src="assets/images/parts/control_valve.jpg" alt="Control Valves" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black/40 flex flex-col items-center justify-center p-2 text-center">
+                        <span class="font-bold text-[10px] tracking-widest uppercase">Control Valves</span>
+                    </div>
+                </div>
+                <div class="aspect-square relative overflow-hidden rounded-xl border border-white/5 group">
+                    <img src="assets/images/parts/swing.jpg" alt="Swing" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black/40 flex flex-col items-center justify-center p-2 text-center">
+                        <span class="font-bold text-[10px] tracking-widest uppercase">Swing</span>
+                    </div>
+                </div>
+                <div class="aspect-square relative overflow-hidden rounded-xl border border-white/5 group">
+                    <img src="assets/images/parts/final_drive.jpg" alt="Final Drive" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black/40 flex flex-col items-center justify-center p-2 text-center">
+                        <span class="font-bold text-[10px] tracking-widest uppercase">Final Drive</span>
+                    </div>
+                </div>
+                <div class="aspect-square relative overflow-hidden rounded-xl border border-white/5 group">
+                    <img src="assets/images/parts/cabin.jpg" alt="Cabin" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black/40 flex flex-col items-center justify-center p-2 text-center">
+                        <span class="font-bold text-[10px] tracking-widest uppercase">Cabin</span>
+                    </div>
+                </div>
+                <div class="aspect-square relative overflow-hidden rounded-xl border border-white/5 group">
+                    <img src="assets/images/parts/cylinder.jpg" alt="Cylinder" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black/40 flex flex-col items-center justify-center p-2 text-center">
+                        <span class="font-bold text-[10px] tracking-widest uppercase">Cylinder</span>
+                    </div>
+                </div>
+                <div class="aspect-square relative overflow-hidden rounded-xl border border-white/5 group">
+                    <img src="assets/images/parts/ECU.jpg" alt="ECU" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black/40 flex flex-col items-center justify-center p-2 text-center">
+                        <span class="font-bold text-[10px] tracking-widest uppercase">ECU</span>
+                    </div>
+                </div>
+                <div class="aspect-square relative overflow-hidden rounded-xl border border-white/5 group">
+                    <img src="assets/images/parts/bucket.jpg" alt="Buckets" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black/40 flex flex-col items-center justify-center p-2 text-center">
+                        <span class="font-bold text-[10px] tracking-widest uppercase">Buckets</span>
+                    </div>
+                </div>
+                <div class="aspect-square relative overflow-hidden rounded-xl border border-white/5 group">
+                    <img src="assets/images/parts/quick_coupler.jpg" alt="Quick Coupler" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black/40 flex flex-col items-center justify-center p-2 text-center">
+                        <span class="font-bold text-[10px] tracking-widest uppercase">Quick Coupler</span>
+                    </div>
+                </div>
+                <div class="aspect-square relative overflow-hidden rounded-xl border border-white/5 group">
+                    <img src="assets/images/parts/hammer.jpg" alt="Hammer" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black/40 flex flex-col items-center justify-center p-2 text-center">
+                        <span class="font-bold text-[10px] tracking-widest uppercase">Hammer</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Remanufactured Section -->
+            <div class="border-t border-white/10 pt-16">
+                <h4 class="text-2xl font-black tracking-tighter uppercase mb-12">Remanufacturing Expertise</h4>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="relative overflow-hidden rounded-3xl group h-64 border border-white/5">
+                        <img src="assets/images/parts/remanufactured_engine.jpg" alt="Remanufactured Engine" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-8">
+                            <h5 class="text-xl font-bold uppercase mb-2">Remanufactured Engine</h5>
+                            <p class="text-slate-400 text-sm">Professional restoration to factory standards.</p>
                         </div>
                     </div>
-                    <div class="aspect-square relative overflow-hidden rounded-xl border border-white/5 group">
-                        <img src="assets/images/parts/valve.jpg" alt="Control Valves" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                        <div class="absolute inset-0 bg-black/40 flex flex-col items-center justify-center p-2 text-center">
-                            <i class="fas fa-cogs text-2xl text-white mb-2"></i>
-                            <span class="font-bold text-[10px] tracking-widest uppercase">Control Valves</span>
-                        </div>
-                    </div>
-                    <div class="aspect-square relative overflow-hidden rounded-xl border border-white/5 group">
-                        <img src="assets/images/parts/bucket.jpg" alt="Buckets" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                        <div class="absolute inset-0 bg-black/40 flex flex-col items-center justify-center p-2 text-center">
-                            <i class="fas fa-archive text-2xl text-white mb-2"></i>
-                            <span class="font-bold text-[10px] tracking-widest uppercase">Buckets</span>
-                        </div>
-                    </div>
-                    <div class="aspect-square relative overflow-hidden rounded-xl border border-white/5 group">
-                        <img src="https://via.placeholder.com/300?text=Cabin" alt="Cabin" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                        <div class="absolute inset-0 bg-black/40 flex flex-col items-center justify-center p-2 text-center">
-                            <i class="fas fa-couch text-2xl text-white mb-2"></i>
-                            <span class="font-bold text-[10px] tracking-widest uppercase">Cabin</span>
-                        </div>
-                    </div>
-                    <div class="aspect-square relative overflow-hidden rounded-xl border border-white/5 group">
-                        <img src="https://via.placeholder.com/300?text=Cylinder" alt="Cylinder" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                        <div class="absolute inset-0 bg-black/40 flex flex-col items-center justify-center p-2 text-center">
-                            <i class="fas fa-piston text-2xl text-white mb-2"></i>
-                            <span class="font-bold text-[10px] tracking-widest uppercase">Cylinder</span>
-                        </div>
-                    </div>
-                    <div class="aspect-square relative overflow-hidden rounded-xl border border-white/5 group">
-                        <img src="assets/images/parts/final_drive.jpg" alt="Final Drives" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                        <div class="absolute inset-0 bg-black/40 flex flex-col items-center justify-center p-2 text-center">
-                            <i class="fas fa-link text-2xl text-white mb-2"></i>
-                            <span class="font-bold text-[10px] tracking-widest uppercase">Final Drives</span>
+                    <div onclick="window.open('https://youtube.com/shorts/V8UOJBptqcY?feature=share')" class="relative overflow-hidden rounded-3xl group h-64 border border-orange-500/30 cursor-pointer">
+                        <img src="assets/images/parts/remanufactured_pump.jpg" alt="Remanufactured Pump" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-orange-600/60 to-transparent flex flex-col justify-end p-8">
+                            <div class="flex items-center justify-between">
+                                <div>
+                                    <h5 class="text-xl font-bold uppercase mb-2">Remanufactured Pump</h5>
+                                    <p class="text-white/80 text-sm">See our testing process on YouTube.</p>
+                                </div>
+                                <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-orange-600 shadow-xl">
+                                    <i class="fas fa-play text-xs ml-1"></i>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
