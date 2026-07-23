@@ -41,7 +41,7 @@ const productData = {
         { "id": 39, "brand": "Kubota", "model": "161", "year": 2021, "price": 16500, "hours": 2500, "weight": "16,100kg", "bucket": "0.7m³", "engine": "Kubota", "image": "assets/images/inventory/ex_39.jpg" },
         { "id": 40, "brand": "Caterpillar", "model": "336D", "year": 2021, "price": 34000, "hours": 2500, "weight": "36,000kg", "bucket": "1.8m³", "engine": "CAT", "image": "assets/images/inventory/ex_40.jpg" },
         { "id": 41, "brand": "Hitachi", "model": "70", "year": 2021, "price": 13500, "hours": 2500, "weight": "7,000kg", "bucket": "0.3m³", "engine": "Isuzu", "image": "assets/images/inventory/ex_41.jpg" },
-        { "id": 12, "brand": "Hitachi", "model": "120-6", "year": 2021, "price": 16500, "hours": 2500, "weight": "12,000kg", "bucket": "0.5m³", "engine": "Isuzu", "image": "assets/images/inventory/ex_42.jpg" },
+        { "id": 42, "brand": "Hitachi", "model": "120-6", "year": 2021, "price": 16500, "hours": 2500, "weight": "12,000kg", "bucket": "0.5m³", "engine": "Isuzu", "image": "assets/images/inventory/ex_42.jpg" },
         { "id": 43, "brand": "SANY", "model": "75", "year": 2021, "price": 13500, "hours": 2500, "weight": "7,500kg", "bucket": "0.32m³", "engine": "Yanmar", "image": "assets/images/inventory/ex_43.JPG" },
         { "id": 44, "brand": "SANY", "model": "135", "year": 2021, "price": 16500, "hours": 2500, "weight": "13,500kg", "bucket": "0.55m³", "engine": "Mitsubishi", "image": "assets/images/inventory/ex_44.jpg" },
         { "id": 45, "brand": "Komatsu", "model": "PC200", "year": 2021, "price": 24500, "hours": 2500, "weight": "19,700kg", "bucket": "1.1m³", "engine": "Komatsu", "image": "assets/images/inventory/ex_45.jpg" },
