@@ -56,6 +56,11 @@
             object-fit: contain; /* Shows full image without cropping */
             padding: 20px;
         }
+
+        /* FAQ Tab Styles */
+        .faq-tab-content { display: none; }
+        .faq-tab-content.active { display: block; }
+        .faq-btn.active { @apply border-orange-500 text-orange-500 bg-orange-50/50; }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-900">
@@ -76,7 +81,7 @@
                 <a href="#parts" class="hover:text-orange-500 transition-colors">Parts</a>
                 <a href="#factory" class="hover:text-orange-500 transition-colors">Factory</a>
                 <a href="#faq" class="hover:text-orange-500 transition-colors">FAQ</a>
-                <a href="#about" class="hover:text-orange-500 transition-colors">About</a>
+                <a href="#contact" class="hover:text-orange-500 transition-colors">Contact</a>
             </nav>
             <div class="flex items-center space-x-6">
                 <a href="https://wa.me/8619803129650" class="hidden sm:block text-orange-500 font-extrabold text-sm"><i class="fab fa-whatsapp mr-2"></i>LIVE INQUIRY</a>
@@ -351,11 +356,26 @@
     <!-- FAQ Section -->
     <section id="faq" class="py-24 bg-slate-50">
         <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-black tracking-tighter uppercase mb-16 text-center">Frequently Asked Questions</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <img src="assets/images/faq/FAQ1.png" alt="FAQ 1" class="w-full rounded-2xl shadow-lg border border-slate-200">
-                <img src="assets/images/faq/FAQ2.png" alt="FAQ 2" class="w-full rounded-2xl shadow-lg border border-slate-200">
-                <img src="assets/images/faq/FAQ3.png" alt="FAQ 3" class="w-full rounded-2xl shadow-lg border border-slate-200">
+            <h2 class="text-4xl font-black tracking-tighter uppercase mb-12 text-center">Frequently Asked Questions</h2>
+            <div class="max-w-4xl mx-auto">
+                <!-- Tab Buttons -->
+                <div class="flex flex-wrap justify-center gap-4 mb-8">
+                    <button onclick="showFaqTab(0)" class="faq-btn active px-6 py-3 border-2 border-slate-200 rounded-xl text-xs font-black tracking-widest uppercase transition-all">Common Questions 1</button>
+                    <button onclick="showFaqTab(1)" class="faq-btn px-6 py-3 border-2 border-slate-200 rounded-xl text-xs font-black tracking-widest uppercase transition-all">Common Questions 2</button>
+                    <button onclick="showFaqTab(2)" class="faq-btn px-6 py-3 border-2 border-slate-200 rounded-xl text-xs font-black tracking-widest uppercase transition-all">Common Questions 3</button>
+                </div>
+                <!-- Tab Contents -->
+                <div class="bg-white rounded-3xl shadow-xl overflow-hidden border border-slate-100">
+                    <div class="faq-tab-content active p-4">
+                        <img src="assets/images/faq/FAQ1.png" alt="FAQ 1" class="w-full">
+                    </div>
+                    <div class="faq-tab-content p-4">
+                        <img src="assets/images/faq/FAQ2.png" alt="FAQ 2" class="w-full">
+                    </div>
+                    <div class="faq-tab-content p-4">
+                        <img src="assets/images/faq/FAQ3.png" alt="FAQ 3" class="w-full">
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -447,6 +467,13 @@
         const factorySlides = document.querySelectorAll('.factory-slide');
         function showFactorySlide(index) { factorySlides.forEach((slide, i) => { if (i === index) { slide.classList.add('active'); slide.style.opacity = '1'; } else { slide.classList.remove('active'); slide.style.opacity = '0'; } }); }
         function changeFactorySlide(step) { currentFactorySlide = (currentFactorySlide + step + factorySlides.length) % factorySlides.length; showFactorySlide(currentFactorySlide); }
+
+        function showFaqTab(index) {
+            const tabs = document.querySelectorAll('.faq-tab-content');
+            const btns = document.querySelectorAll('.faq-btn');
+            tabs.forEach((tab, i) => tab.classList.toggle('active', i === index));
+            btns.forEach((btn, i) => btn.classList.toggle('active', i === index));
+        }
 
         const grid = document.getElementById('product-grid');
         let currentFilter = 'ALL';
