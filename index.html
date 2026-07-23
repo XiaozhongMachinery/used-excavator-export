@@ -53,11 +53,11 @@
             z-index: 2;
             width: 100%;
             height: 100%;
-            object-fit: contain;
+            object-fit: contain; /* Shows full image without cropping */
             padding: 20px;
         }
 
-        /* Hero Image Vertical Adjustment - Adjusted for more height and right-shift */
+        /* Hero Image Vertical Adjustment - Top Aligned and Slightly Shifter Right */
         .hero-slide img {
             object-position: 70% 0% !important;
         }
@@ -146,68 +146,42 @@
     </section>
 
     <!-- Trust Stats -->
-    <section class="stats-bg py-16 border-y border-white/5">
+    <section class="stats-bg py-16 border-y border-white/5 text-white">
         <div class="container mx-auto px-6">
-            <div class="grid grid-cols-2 lg:grid-cols-4 gap-12">
-                <div class="text-center">
-                    <div class="text-5xl font-black text-white mb-2 tracking-tighter">18+</div>
-                    <div class="text-orange-500 text-[10px] font-bold tracking-[0.2em] uppercase">Years Industry Experience</div>
-                </div>
-                <div class="text-center">
-                    <div class="text-5xl font-black text-white mb-2 tracking-tighter">50+</div>
-                    <div class="text-orange-500 text-[10px] font-bold tracking-[0.2em] uppercase">Global Countries Served</div>
-                </div>
-                <div class="text-center">
-                    <div class="text-5xl font-black text-white mb-2 tracking-tighter">1000+</div>
-                    <div class="text-orange-500 text-[10px] font-bold tracking-[0.2em] uppercase">Machines Sold Annually</div>
-                </div>
-                <div class="text-center">
-                    <div class="text-5xl font-black text-white mb-2 tracking-tighter">24H</div>
-                    <div class="text-orange-500 text-[10px] font-bold tracking-[0.2em] uppercase">Professional Tech Support</div>
-                </div>
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-12 text-center">
+                <div><div class="text-5xl font-black mb-2 tracking-tighter">18+</div><div class="text-orange-500 text-[10px] font-bold tracking-[0.2em] uppercase">Years Experience</div></div>
+                <div><div class="text-5xl font-black mb-2 tracking-tighter">50+</div><div class="text-orange-500 text-[10px] font-bold tracking-[0.2em] uppercase">Countries Served</div></div>
+                <div><div class="text-5xl font-black mb-2 tracking-tighter">1000+</div><div class="text-orange-500 text-[10px] font-bold tracking-[0.2em] uppercase">Machines Sold</div></div>
+                <div><div class="text-5xl font-black mb-2 tracking-tighter">24H</div><div class="text-orange-500 text-[10px] font-bold tracking-[0.2em] uppercase">Professional Support</div></div>
             </div>
         </div>
     </section>
 
     <!-- Core Advantages -->
     <section class="py-24 bg-white relative">
-        <div class="container mx-auto px-6">
-            <div class="flex flex-col lg:flex-row items-end justify-between mb-20">
-                <div class="max-w-2xl">
-                    <h3 class="text-orange-500 text-xs font-black tracking-[0.3em] uppercase mb-4">Core Advantages</h3>
-                    <h2 class="text-4xl md:text-5xl font-black tracking-tighter leading-none">WHY PROFESSIONALS CHOOSE <br>XIAOZHONG MACHINERY?</h2>
+        <div class="container mx-auto px-6 text-center">
+            <h3 class="text-orange-500 text-xs font-black tracking-[0.3em] uppercase mb-4">Core Advantages</h3>
+            <h2 class="text-4xl md:text-5xl font-black tracking-tighter leading-none mb-20">WHY PROFESSIONALS CHOOSE XIAOZHONG?</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="p-8 bg-slate-50 rounded-3xl border border-slate-100 hover:border-orange-200 transition-all group">
+                    <div class="w-14 h-14 bg-white shadow-sm rounded-2xl flex items-center justify-center mb-6 mx-auto group-hover:bg-orange-600 group-hover:text-white transition-all"><i class="fas fa-industry text-xl text-orange-600 group-hover:text-white"></i></div>
+                    <h4 class="text-lg font-black mb-3 uppercase tracking-tighter">Factory Direct</h4>
+                    <p class="text-slate-500 text-xs leading-relaxed">Save 15-40% by cutting out middlemen with our chain.</p>
                 </div>
-                <p class="text-slate-500 max-w-sm mt-6 lg:mt-0 text-sm italic">"Integrating maintenance, disassembly, and remanufacturing into one complete industrial chain."</p>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="p-10 bg-slate-50 rounded-2xl border border-slate-100 hover:border-orange-200 transition-all duration-500 group text-center">
-                    <div class="w-14 h-14 bg-white shadow-lg rounded-xl flex items-center justify-center mb-8 mx-auto group-hover:bg-orange-600 transition-colors duration-500">
-                        <i class="fas fa-industry text-orange-600 text-xl group-hover:text-white"></i>
-                    </div>
-                    <h4 class="text-xl font-bold mb-4 uppercase tracking-tighter">Factory Direct</h4>
-                    <p class="text-slate-600 text-sm leading-relaxed">Save 15-40% by cutting out middlemen with our complete industrial chain.</p>
+                <div class="p-8 bg-slate-50 rounded-3xl border border-slate-100 hover:border-orange-200 transition-all group">
+                    <div class="w-14 h-14 bg-white shadow-sm rounded-2xl flex items-center justify-center mb-6 mx-auto group-hover:bg-orange-600 group-hover:text-white transition-all"><i class="fas fa-shield-alt text-xl text-orange-600 group-hover:text-white"></i></div>
+                    <h4 class="text-lg font-black mb-3 uppercase tracking-tighter">12-Month Warranty</h4>
+                    <p class="text-slate-500 text-xs leading-relaxed">Rigorous 120-point inspection for every machine.</p>
                 </div>
-                <div class="p-10 bg-slate-50 rounded-2xl border border-slate-100 hover:border-orange-200 transition-all duration-500 group text-center">
-                    <div class="w-14 h-14 bg-white shadow-lg rounded-xl flex items-center justify-center mb-8 mx-auto group-hover:bg-orange-600 transition-colors duration-500">
-                        <i class="fas fa-shield-alt text-orange-600 text-xl group-hover:text-white"></i>
-                    </div>
-                    <h4 class="text-xl font-bold mb-4 uppercase tracking-tighter">12-Month Warranty</h4>
-                    <p class="text-slate-600 text-sm leading-relaxed">Every excavator undergoes a 120-point inspection and comes with a 12 month-warranty.</p>
+                <div class="p-8 bg-slate-50 rounded-3xl border border-slate-100 hover:border-orange-200 transition-all group">
+                    <div class="w-14 h-14 bg-white shadow-sm rounded-2xl flex items-center justify-center mb-6 mx-auto group-hover:bg-orange-600 group-hover:text-white transition-all"><i class="fas fa-box text-xl text-orange-600 group-hover:text-white"></i></div>
+                    <h4 class="text-lg font-black mb-3 uppercase tracking-tighter">In-Stock Ready</h4>
+                    <p class="text-slate-500 text-xs leading-relaxed">All machines physically in our yard, ready to ship.</p>
                 </div>
-                <div class="p-10 bg-slate-50 rounded-2xl border border-slate-100 hover:border-orange-200 transition-all duration-500 group text-center">
-                    <div class="w-14 h-14 bg-white shadow-lg rounded-xl flex items-center justify-center mb-8 mx-auto group-hover:bg-orange-600 transition-colors duration-500">
-                        <i class="fas fa-box text-orange-600 text-xl group-hover:text-white"></i>
-                    </div>
-                    <h4 class="text-xl font-bold mb-4 uppercase tracking-tighter">In-Stock Ready</h4>
-                    <p class="text-slate-600 text-sm leading-relaxed">All listed machines are physically in our yard, ready for immediate delivery.</p>
-                </div>
-                <div class="p-10 bg-slate-50 rounded-2xl border border-slate-100 hover:border-orange-200 transition-all duration-500 group text-center">
-                    <div class="w-14 h-14 bg-white shadow-lg rounded-xl flex items-center justify-center mb-8 mx-auto group-hover:bg-orange-600 transition-colors duration-500">
-                        <i class="fas fa-eye text-orange-600 text-xl group-hover:text-white"></i>
-                    </div>
-                    <h4 class="text-xl font-bold mb-4 uppercase tracking-tighter">On-Site Inspection</h4>
-                    <p class="text-slate-600 text-sm leading-relaxed">We welcome customers to visit our factory and inspect machine conditions personally.</p>
+                <div class="p-8 bg-slate-50 rounded-3xl border border-slate-100 hover:border-orange-200 transition-all group">
+                    <div class="w-14 h-14 bg-white shadow-sm rounded-2xl flex items-center justify-center mb-6 mx-auto group-hover:bg-orange-600 group-hover:text-white transition-all"><i class="fas fa-eye text-xl text-orange-600 group-hover:text-white"></i></div>
+                    <h4 class="text-lg font-black mb-3 uppercase tracking-tighter">On-Site Inspection</h4>
+                    <p class="text-slate-500 text-xs leading-relaxed">Personal inspection and factory visit welcomed.</p>
                 </div>
             </div>
         </div>
@@ -223,11 +197,15 @@
                 </div>
                 <div class="mt-8 md:mt-0 flex flex-wrap gap-2">
                     <button onclick="filterBrand('ALL')" class="px-5 py-2 bg-orange-600 text-white border border-orange-600 rounded-full text-xs font-bold transition">ALL</button>
-                    <button onclick="filterBrand('Caterpillar')" class="px-5 py-2 bg-white border border-slate-200 rounded-full text-xs font-bold hover:border-orange-500 hover:text-orange-500 transition">CATERPILLAR</button>
-                    <button onclick="filterBrand('Komatsu')" class="px-5 py-2 bg-white border border-slate-200 rounded-full text-xs font-bold hover:border-orange-500 hover:text-orange-500 transition">KOMATSU</button>
-                    <button onclick="filterBrand('SANY')" class="px-5 py-2 bg-white border border-slate-200 rounded-full text-xs font-bold hover:border-orange-500 hover:text-orange-500 transition">SANY</button>
-                    <button onclick="filterBrand('Hitachi')" class="px-5 py-2 bg-white border border-slate-200 rounded-full text-xs font-bold hover:border-orange-500 hover:text-orange-500 transition">HITACHI</button>
-                    <button onclick="filterBrand('Volvo')" class="px-5 py-2 bg-white border border-slate-200 rounded-full text-xs font-bold hover:border-orange-500 hover:text-orange-500 transition">VOLVO</button>
+                    <button onclick="filterBrand('Caterpillar')" class="px-5 py-2 bg-white border border-slate-200 rounded-full text-xs font-bold hover:border-orange-500 transition">CATERPILLAR</button>
+                    <button onclick="filterBrand('Komatsu')" class="px-5 py-2 bg-white border border-slate-200 rounded-full text-xs font-bold hover:border-orange-500 transition">KOMATSU</button>
+                    <button onclick="filterBrand('SANY')" class="px-5 py-2 bg-white border border-slate-200 rounded-full text-xs font-bold hover:border-orange-500 transition">SANY</button>
+                    <button onclick="filterBrand('Hitachi')" class="px-5 py-2 bg-white border border-slate-200 rounded-full text-xs font-bold hover:border-orange-500 transition">HITACHI</button>
+                    <button onclick="filterBrand('Volvo')" class="px-5 py-2 bg-white border border-slate-200 rounded-full text-xs font-bold hover:border-orange-500 transition">VOLVO</button>
+                    <button onclick="filterBrand('Kubota')" class="px-5 py-2 bg-white border border-slate-200 rounded-full text-xs font-bold hover:border-orange-500 transition">KUBOTA</button>
+                    <button onclick="filterBrand('Doosan')" class="px-5 py-2 bg-white border border-slate-200 rounded-full text-xs font-bold hover:border-orange-500 transition">DOOSAN</button>
+                    <button onclick="filterBrand('Hyundai')" class="px-5 py-2 bg-white border border-slate-200 rounded-full text-xs font-bold hover:border-orange-500 transition">HYUNDAI</button>
+                    <button onclick="filterBrand('CASE')" class="px-5 py-2 bg-white border border-slate-200 rounded-full text-xs font-bold hover:border-orange-500 transition">CASE</button>
                 </div>
             </div>
             <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8"></div>
@@ -239,174 +217,41 @@
 
     <!-- Parts Spotlight -->
     <section id="parts" class="py-24 bg-industrial-dark text-white">
-        <div class="container mx-auto px-6">
-            <div class="mb-20">
-                <h3 class="text-orange-500 text-xs font-black tracking-[0.3em] uppercase mb-4">Genuine Components</h3>
-                <h2 class="text-4xl md:text-6xl font-black tracking-tighter leading-none mb-8">HIGH-PERFORMANCE <br>SPARE PARTS.</h2>
-                <p class="text-slate-400 mb-10 text-lg font-light leading-relaxed max-w-4xl">
-                    We specialize in genuine used engines and hydraulic components for Caterpillar, Doosan, Volvo, and Cummins. Our inventory also covers major brands including Hitachi, Kubota, Komatsu, Sany, Hyundai, Isuzu, and Mitsubishi.
-                </p>
+        <div class="container mx-auto px-6 text-center">
+            <h3 class="text-orange-500 text-xs font-black tracking-[0.3em] uppercase mb-4">Genuine Components</h3>
+            <h2 class="text-4xl md:text-6xl font-black tracking-tighter leading-none mb-16">HIGH-PERFORMANCE SPARE PARTS</h2>
+            <div class="grid grid-cols-2 md:grid-cols-6 gap-4 mb-20">
+                <div class="aspect-square relative overflow-hidden rounded-xl group border border-white/10"><img src="assets/images/parts/engine.jpg" class="w-full h-full object-cover transition-transform group-hover:scale-110"><div class="absolute inset-0 bg-black/40 flex items-center justify-center p-2"><span class="font-bold text-[10px] uppercase tracking-widest">Engines</span></div></div>
+                <div class="aspect-square relative overflow-hidden rounded-xl group border border-white/10"><img src="assets/images/parts/pump.jpg" class="w-full h-full object-cover transition-transform group-hover:scale-110"><div class="absolute inset-0 bg-black/40 flex items-center justify-center p-2"><span class="font-bold text-[10px] uppercase tracking-widest">Pumps</span></div></div>
+                <div class="aspect-square relative overflow-hidden rounded-xl group border border-white/10"><img src="assets/images/parts/control_valve.jpg" class="w-full h-full object-cover transition-transform group-hover:scale-110"><div class="absolute inset-0 bg-black/40 flex items-center justify-center p-2"><span class="font-bold text-[10px] uppercase tracking-widest text-center leading-tight">Control Valves</span></div></div>
+                <div class="aspect-square relative overflow-hidden rounded-xl group border border-white/10"><img src="assets/images/parts/swing.jpg" class="w-full h-full object-cover transition-transform group-hover:scale-110"><div class="absolute inset-0 bg-black/40 flex items-center justify-center p-2"><span class="font-bold text-[10px] uppercase tracking-widest">Swing</span></div></div>
+                <div class="aspect-square relative overflow-hidden rounded-xl group border border-white/10"><img src="assets/images/parts/final_drive.jpg" class="w-full h-full object-cover transition-transform group-hover:scale-110"><div class="absolute inset-0 bg-black/40 flex items-center justify-center p-2"><span class="font-bold text-[10px] uppercase tracking-widest text-center leading-tight">Final Drive</span></div></div>
+                <div class="aspect-square relative overflow-hidden rounded-xl group border border-white/10"><img src="assets/images/parts/cabin.jpg" class="w-full h-full object-cover transition-transform group-hover:scale-110"><div class="absolute inset-0 bg-black/40 flex items-center justify-center p-2"><span class="font-bold text-[10px] uppercase tracking-widest">Cabin</span></div></div>
+                <div class="aspect-square relative overflow-hidden rounded-xl group border border-white/10"><img src="assets/images/parts/cylinder.jpg" class="w-full h-full object-cover transition-transform group-hover:scale-110"><div class="absolute inset-0 bg-black/40 flex items-center justify-center p-2"><span class="font-bold text-[10px] uppercase tracking-widest">Cylinder</span></div></div>
+                <div class="aspect-square relative overflow-hidden rounded-xl group border border-white/10"><img src="assets/images/parts/ECU.jpg" class="w-full h-full object-cover transition-transform group-hover:scale-110"><div class="absolute inset-0 bg-black/40 flex items-center justify-center p-2"><span class="font-bold text-[10px] uppercase tracking-widest">ECU</span></div></div>
+                <div class="aspect-square relative overflow-hidden rounded-xl group border border-white/10"><img src="assets/images/parts/monitor.jpg" class="w-full h-full object-cover transition-transform group-hover:scale-110"><div class="absolute inset-0 bg-black/40 flex items-center justify-center p-2"><span class="font-bold text-[10px] uppercase tracking-widest">Monitor</span></div></div>
+                <div class="aspect-square relative overflow-hidden rounded-xl group border border-white/10"><img src="assets/images/parts/bucket.jpg" class="w-full h-full object-cover transition-transform group-hover:scale-110"><div class="absolute inset-0 bg-black/40 flex items-center justify-center p-2"><span class="font-bold text-[10px] uppercase tracking-widest">Buckets</span></div></div>
+                <div class="aspect-square relative overflow-hidden rounded-xl group border border-white/10"><img src="assets/images/parts/quick_coupler.jpg" class="w-full h-full object-cover transition-transform group-hover:scale-110"><div class="absolute inset-0 bg-black/40 flex items-center justify-center p-2"><span class="font-bold text-[10px] uppercase tracking-widest text-center leading-tight">Quick Coupler</span></div></div>
+                <div class="aspect-square relative overflow-hidden rounded-xl group border border-white/10"><img src="assets/images/parts/hammer.jpg" class="w-full h-full object-cover transition-transform group-hover:scale-110"><div class="absolute inset-0 bg-black/40 flex items-center justify-center p-2"><span class="font-bold text-[10px] uppercase tracking-widest">Hammer</span></div></div>
             </div>
-
-            <!-- Standard Parts Grid -->
-            <div class="grid grid-cols-2 md:grid-cols-5 gap-4 mb-20">
-                <div class="aspect-square relative overflow-hidden rounded-xl border border-white/5 group">
-                    <img src="assets/images/parts/engine.jpg" alt="Engines" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-black/40 flex flex-col items-center justify-center p-2 text-center">
-                        <span class="font-bold text-[10px] tracking-widest uppercase">Engines</span>
-                    </div>
-                </div>
-                <div class="aspect-square relative overflow-hidden rounded-xl border border-white/5 group">
-                    <img src="assets/images/parts/control_valve.jpg" alt="Control Valves" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-black/40 flex flex-col items-center justify-center p-2 text-center">
-                        <span class="font-bold text-[10px] tracking-widest uppercase">Control Valves</span>
-                    </div>
-                </div>
-                <div class="aspect-square relative overflow-hidden rounded-xl border border-white/5 group">
-                    <img src="assets/images/parts/swing.jpg" alt="Swing" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-black/40 flex flex-col items-center justify-center p-2 text-center">
-                        <span class="font-bold text-[10px] tracking-widest uppercase">Swing</span>
-                    </div>
-                </div>
-                <div class="aspect-square relative overflow-hidden rounded-xl border border-white/5 group">
-                    <img src="assets/images/parts/final_drive.jpg" alt="Final Drive" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-black/40 flex flex-col items-center justify-center p-2 text-center">
-                        <span class="font-bold text-[10px] tracking-widest uppercase">Final Drive</span>
-                    </div>
-                </div>
-                <div class="aspect-square relative overflow-hidden rounded-xl border border-white/5 group">
-                    <img src="assets/images/parts/cabin.jpg" alt="Cabin" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-black/40 flex flex-col items-center justify-center p-2 text-center">
-                        <span class="font-bold text-[10px] tracking-widest uppercase">Cabin</span>
-                    </div>
-                </div>
-                <div class="aspect-square relative overflow-hidden rounded-xl border border-white/5 group">
-                    <img src="assets/images/parts/cylinder.jpg" alt="Cylinder" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-black/40 flex flex-col items-center justify-center p-2 text-center">
-                        <span class="font-bold text-[10px] tracking-widest uppercase">Cylinder</span>
-                    </div>
-                </div>
-                <div class="aspect-square relative overflow-hidden rounded-xl border border-white/5 group">
-                    <img src="assets/images/parts/ECU.jpg" alt="ECU" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-black/40 flex flex-col items-center justify-center p-2 text-center">
-                        <span class="font-bold text-[10px] tracking-widest uppercase">ECU</span>
-                    </div>
-                </div>
-                <div class="aspect-square relative overflow-hidden rounded-xl border border-white/5 group">
-                    <img src="assets/images/parts/bucket.jpg" alt="Buckets" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-black/40 flex flex-col items-center justify-center p-2 text-center">
-                        <span class="font-bold text-[10px] tracking-widest uppercase">Buckets</span>
-                    </div>
-                </div>
-                <div class="aspect-square relative overflow-hidden rounded-xl border border-white/5 group">
-                    <img src="assets/images/parts/quick_coupler.jpg" alt="Quick Coupler" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-black/40 flex flex-col items-center justify-center p-2 text-center">
-                        <span class="font-bold text-[10px] tracking-widest uppercase">Quick Coupler</span>
-                    </div>
-                </div>
-                <div class="aspect-square relative overflow-hidden rounded-xl border border-white/5 group">
-                    <img src="assets/images/parts/hammer.jpg" alt="Hammer" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-black/40 flex flex-col items-center justify-center p-2 text-center">
-                        <span class="font-bold text-[10px] tracking-widest uppercase">Hammer</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Remanufactured Section -->
-            <div class="border-t border-white/10 pt-16">
-                <h4 class="text-2xl font-black tracking-tighter uppercase mb-12">Remanufacturing Expertise</h4>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div class="relative overflow-hidden rounded-3xl group h-64 border border-white/5">
-                        <img src="assets/images/parts/remanufactured_engine.jpg" alt="Remanufactured Engine" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-8">
-                            <h5 class="text-xl font-bold uppercase mb-2">Remanufactured Engine</h5>
-                            <p class="text-slate-400 text-sm">Professional restoration to factory standards.</p>
-                        </div>
-                    </div>
-                    <div onclick="window.open('https://youtube.com/shorts/V8UOJBptqcY?feature=share')" class="relative overflow-hidden rounded-3xl group h-64 border border-orange-500/30 cursor-pointer">
-                        <img src="assets/images/parts/remanufactured_pump.jpg" alt="Remanufactured Pump" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                        <div class="absolute inset-0 bg-gradient-to-t from-orange-600/60 to-transparent flex flex-col justify-end p-8">
-                            <div class="flex items-center justify-between">
-                                <div>
-                                    <h5 class="text-xl font-bold uppercase mb-2">Remanufactured Pump</h5>
-                                    <p class="text-white/80 text-sm">See our testing process on YouTube.</p>
-                                </div>
-                                <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-orange-600 shadow-xl">
-                                    <i class="fas fa-play text-xs ml-1"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 pt-12 border-t border-white/10">
+                <div class="relative overflow-hidden rounded-2xl h-48 group"><img src="assets/images/parts/remanufactured_engine.jpg" class="w-full h-full object-cover"><div class="absolute inset-0 bg-black/60 flex items-center justify-center"><h5 class="font-black uppercase tracking-tighter">Remanufactured Engine</h5></div></div>
+                <div onclick="window.open('https://youtube.com/shorts/V8UOJBptqcY')" class="relative overflow-hidden rounded-2xl h-48 group cursor-pointer border border-orange-500/30"><img src="assets/images/parts/remanufactured_pump.jpg" class="w-full h-full object-cover"><div class="absolute inset-0 bg-orange-600/40 flex flex-col items-center justify-center"><h5 class="font-black uppercase tracking-tighter mb-2">Remanufactured Pump</h5><i class="fas fa-play text-xs"></i></div></div>
             </div>
         </div>
     </section>
 
     <!-- Factory Experience Slider -->
     <section id="factory" class="py-24 bg-white overflow-hidden">
-        <div class="container mx-auto px-6">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-                <div class="relative group">
-                    <div id="factory-slider" class="relative h-[500px] overflow-hidden rounded-3xl shadow-2xl">
-                        <!-- Slide 1 -->
-                        <div class="factory-slide active">
-                            <div class="slide-bg-blur" style="background-image: url('assets/images/factory/factory2.jpg')"></div>
-                            <img src="assets/images/factory/factory2.jpg" alt="Factory 2" class="main-img">
-                        </div>
-                        <!-- Slide 2 -->
-                        <div class="factory-slide">
-                            <div class="slide-bg-blur" style="background-image: url('assets/images/factory/factory3.jpg')"></div>
-                            <img src="assets/images/factory/factory3.jpg" alt="Factory 3" class="main-img">
-                        </div>
-                        <!-- Slide 3 -->
-                        <div class="factory-slide">
-                            <div class="slide-bg-blur" style="background-image: url('assets/images/factory/factory4.jpg')"></div>
-                            <img src="assets/images/factory/factory4.jpg" alt="Factory 4" class="main-img">
-                        </div>
-                        <!-- Slide 4 -->
-                        <div class="factory-slide">
-                            <div class="slide-bg-blur" style="background-image: url('assets/images/factory/factory5.jpg')"></div>
-                            <img src="assets/images/factory/factory5.jpg" alt="Factory 5" class="main-img">
-                        </div>
-                        
-                        <!-- Slider Controls -->
-                        <div class="absolute bottom-6 right-6 flex space-x-2 z-30">
-                            <button onclick="changeFactorySlide(-1)" class="w-12 h-12 bg-black/50 backdrop-blur-md rounded-full flex items-center justify-center text-white hover:bg-orange-600 transition-all border border-white/20">
-                                <i class="fas fa-chevron-left text-xs"></i>
-                            </button>
-                            <button onclick="changeFactorySlide(1)" class="w-12 h-12 bg-black/50 backdrop-blur-md rounded-full flex items-center justify-center text-white hover:bg-orange-600 transition-all border border-white/20">
-                                <i class="fas fa-chevron-right text-xs"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="absolute -bottom-6 -left-6 bg-industrial-dark p-6 rounded-2xl shadow-2xl z-20 border border-white/10 hidden sm:block">
-                        <p class="text-white text-2xl font-black tracking-tighter leading-none mb-1">30,000 m²</p>
-                        <p class="text-orange-500 text-[8px] font-bold tracking-widest uppercase">Manufacturing Base</p>
-                    </div>
-                </div>
-                <div>
-                    <h3 class="text-orange-500 text-xs font-black tracking-[0.3em] uppercase mb-4">The Xiaozhong Edge</h3>
-                    <h2 class="text-4xl md:text-5xl font-black tracking-tighter leading-[0.9] mb-8">FACTORY SOURCE <br>IS THE BEST SOURCE.</h2>
-                    <p class="text-slate-600 mb-8 leading-relaxed">
-                        Unlike brokers, we own the workshops. Our integrated industrial chain covers the entire lifecycle of construction machinery—ensuring that every part is inspected and every machine is restored to peak performance.
-                    </p>
-                    <div class="space-y-6">
-                        <div class="flex items-start space-x-4">
-                            <div class="w-6 h-6 rounded-full bg-orange-100 flex items-center justify-center mt-1"><i class="fas fa-check text-orange-600 text-[10px]"></i></div>
-                            <div>
-                                <h5 class="font-bold text-lg leading-none mb-1">In-house Maintenance Team</h5>
-                                <p class="text-slate-500 text-xs">50+ certified engineers specializing in engine and hydraulic restoration.</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start space-x-4">
-                            <div class="w-6 h-6 rounded-full bg-orange-100 flex items-center justify-center mt-1"><i class="fas fa-check text-orange-600 text-[10px]"></i></div>
-                            <div>
-                                <h5 class="font-bold text-lg leading-none mb-1">Global Part Supply Chain</h5>
-                                <p class="text-slate-500 text-xs">Access to genuine spare parts for CAT, Komatsu, and all major brands.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        <div class="container mx-auto px-6 text-center">
+            <h3 class="text-orange-500 text-xs font-black uppercase mb-4">The Xiaozhong Edge</h3>
+            <h2 class="text-4xl md:text-5xl font-black mb-16 tracking-tighter">FACTORY SOURCE IS THE BEST SOURCE.</h2>
+            <div id="factory-slider" class="relative h-[600px] max-w-5xl mx-auto overflow-hidden rounded-[3rem] shadow-2xl">
+                <div class="factory-slide active"><div class="slide-bg-blur" style="background-image: url('assets/images/factory/factory2.jpg')"></div><img src="assets/images/factory/factory2.jpg" class="main-img"></div>
+                <div class="factory-slide"><div class="slide-bg-blur" style="background-image: url('assets/images/factory/factory3.jpg')"></div><img src="assets/images/factory/factory3.jpg" class="main-img"></div>
+                <div class="factory-slide"><div class="slide-bg-blur" style="background-image: url('assets/images/factory/factory4.jpg')"></div><img src="assets/images/factory/factory4.jpg" class="main-img"></div>
+                <div class="factory-slide"><div class="slide-bg-blur" style="background-image: url('assets/images/factory/factory5.jpg')"></div><img src="assets/images/factory/factory5.jpg" class="main-img"></div>
+                <div class="absolute bottom-10 right-10 flex space-x-3 z-30"><button onclick="changeFactorySlide(-1)" class="w-14 h-14 bg-black/60 backdrop-blur-md rounded-full flex items-center justify-center text-white border border-white/20 hover:bg-orange-600 transition-all shadow-xl"><i class="fas fa-chevron-left"></i></button><button onclick="changeFactorySlide(1)" class="w-14 h-14 bg-black/60 backdrop-blur-md rounded-full flex items-center justify-center text-white border border-white/20 hover:bg-orange-600 transition-all shadow-xl"><i class="fas fa-chevron-right"></i></button></div>
             </div>
         </div>
     </section>
@@ -416,23 +261,15 @@
         <div class="container mx-auto px-6">
             <h2 class="text-4xl font-black tracking-tighter uppercase mb-12 text-center">Frequently Asked Questions</h2>
             <div class="max-w-4xl mx-auto">
-                <!-- Tab Buttons -->
                 <div class="flex flex-wrap justify-center gap-4 mb-8">
                     <button onclick="showFaqTab(0)" class="faq-btn active px-6 py-3 border-2 border-slate-200 rounded-xl text-xs font-black tracking-widest uppercase transition-all">Common Questions 1</button>
                     <button onclick="showFaqTab(1)" class="faq-btn px-6 py-3 border-2 border-slate-200 rounded-xl text-xs font-black tracking-widest uppercase transition-all">Common Questions 2</button>
                     <button onclick="showFaqTab(2)" class="faq-btn px-6 py-3 border-2 border-slate-200 rounded-xl text-xs font-black tracking-widest uppercase transition-all">Common Questions 3</button>
                 </div>
-                <!-- Tab Contents -->
                 <div class="bg-white rounded-3xl shadow-xl overflow-hidden border border-slate-100">
-                    <div class="faq-tab-content active p-4">
-                        <img src="assets/images/faq/FAQ1.png" alt="FAQ 1" class="w-full">
-                    </div>
-                    <div class="faq-tab-content p-4">
-                        <img src="assets/images/faq/FAQ2.png" alt="FAQ 2" class="w-full">
-                    </div>
-                    <div class="faq-tab-content p-4">
-                        <img src="assets/images/faq/FAQ3.png" alt="FAQ 3" class="w-full">
-                    </div>
+                    <div class="faq-tab-content active p-4"><img src="assets/images/faq/FAQ1.png" class="w-full"></div>
+                    <div class="faq-tab-content p-4"><img src="assets/images/faq/FAQ2.png" class="w-full"></div>
+                    <div class="faq-tab-content p-4"><img src="assets/images/faq/FAQ3.png" class="w-full"></div>
                 </div>
             </div>
         </div>
@@ -440,135 +277,60 @@
 
     <!-- Global Contact Matrix -->
     <section id="contact" class="py-24 bg-white">
-        <div class="container mx-auto px-6">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-20">
-                <div>
-                    <h2 class="text-4xl font-black tracking-tighter uppercase mb-6">GLOBAL CONTACT MATRIX</h2>
-                    <p class="text-slate-500 mb-12">Connect with our regional managers via WhatsApp or WeChat for instant response.</p>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-10">
-                        <div>
-                            <div class="flex items-center mb-6">
-                                <i class="fab fa-whatsapp text-2xl text-green-500 mr-3"></i>
-                                <h4 class="font-black text-xs tracking-widest uppercase">WhatsApp</h4>
-                            </div>
-                            <ul class="space-y-4 text-sm font-medium text-slate-600">
-                                <li class="pb-4 border-b border-slate-200">+86 198 0312 9650</li>
-                                <li class="pb-4 border-b border-slate-200">+86 177 3622 9310</li>
-                                <li class="pb-4 border-b border-slate-200">+86 180 0322 8982</li>
-                                <li class="pb-4 border-b border-slate-200">+86 191 3320 0711</li>
-                            </ul>
-                        </div>
-                        <div>
-                            <div class="flex items-center mb-6">
-                                <i class="fab fa-weixin text-2xl text-green-600 mr-3"></i>
-                                <h4 class="font-black text-xs tracking-widest uppercase">WeChat</h4>
-                            </div>
-                            <ul class="space-y-4 text-sm font-medium text-slate-600">
-                                <li class="pb-4 border-b border-slate-200">+86 199 1212 9996</li>
-                                <li class="pb-4 border-b border-slate-200">+86 180 0322 8982</li>
-                                <li class="pb-4 border-b border-slate-200">+86 191 3320 0711</li>
-                                <li class="pb-4 border-b border-slate-200">+86 198 0312 9650</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-slate-50 p-10 rounded-3xl shadow-xl border border-slate-100">
-                    <h3 class="text-2xl font-black mb-8 tracking-tighter uppercase">QUICK INQUIRY</h3>
-                    <form class="space-y-6">
-                        <div class="grid grid-cols-2 gap-6">
-                            <div>
-                                <label class="block text-[10px] font-black uppercase tracking-widest text-slate-400 mb-2">Name</label>
-                                <input type="text" class="w-full px-5 py-4 bg-white border border-slate-100 rounded-xl focus:outline-none focus:ring-2 focus:ring-orange-500 transition">
-                            </div>
-                            <div>
-                                <label class="block text-[10px] font-black uppercase tracking-widest text-slate-400 mb-2">Company</label>
-                                <input type="text" class="w-full px-5 py-4 bg-white border border-slate-100 rounded-xl focus:outline-none focus:ring-2 focus:ring-orange-500 transition">
-                            </div>
-                        </div>
-                        <div>
-                            <label class="block text-[10px] font-black uppercase tracking-widest text-slate-400 mb-2">Email or Phone (WhatsApp)</label>
-                            <input type="text" class="w-full px-5 py-4 bg-white border border-slate-100 rounded-xl focus:outline-none focus:ring-2 focus:ring-orange-500 transition">
-                        </div>
-                        <div>
-                            <label class="block text-[10px] font-black uppercase tracking-widest text-slate-400 mb-2">Message</label>
-                            <textarea class="w-full px-5 py-4 bg-white border border-slate-100 rounded-xl h-32 focus:outline-none focus:ring-2 focus:ring-orange-500 transition" placeholder="Tell us which models or parts you need..."></textarea>
-                        </div>
-                        <button class="w-full btn-fancy">SEND SECURE MESSAGE</button>
-                    </form>
-                </div>
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl font-black uppercase mb-12">GLOBAL CONTACT MATRIX</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto">
+                <div class="p-10 bg-slate-50 rounded-[2rem] text-left border border-slate-100 shadow-sm"><h4 class="font-black uppercase mb-6 text-green-600 text-lg tracking-widest"><i class="fab fa-whatsapp mr-3"></i>WhatsApp</h4><p class="text-base font-bold text-slate-700 leading-loose">+86 198 0312 9650<br>+86 177 3622 9310<br>+86 180 0322 8982</p></div>
+                <div class="p-10 bg-slate-50 rounded-[2rem] text-left border border-slate-100 shadow-sm"><h4 class="font-black uppercase mb-6 text-green-700 text-lg tracking-widest"><i class="fab fa-weixin mr-3"></i>WeChat</h4><p class="text-base font-bold text-slate-700 leading-loose">+86 199 1212 9996<br>+86 180 0322 8982<br>+86 191 3320 0711</p></div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-industrial-dark text-slate-500 py-16 border-t border-white/5">
-        <div class="container mx-auto px-6 text-center">
-            <h4 class="text-white font-black text-xl tracking-tighter uppercase mb-2">Xiaozhong Machinery</h4>
-            <p class="text-xs uppercase tracking-widest font-bold mb-8">The Standard in Remanufacturing</p>
-            <div class="mt-12 pt-12 border-t border-white/5 text-[10px] font-bold tracking-widest uppercase">
-                &copy; 2026 HEBEI XIAOZHONG MACHINERY MANUFACTURING CO., LTD. ALL RIGHTS RESERVED.
-            </div>
-        </div>
+    <footer class="bg-industrial-dark text-slate-500 py-16 text-center border-t border-white/5">
+        <h4 class="text-white font-black text-xl mb-2 tracking-tighter uppercase">Xiaozhong Machinery</h4>
+        <p class="text-[10px] uppercase font-bold tracking-widest">&copy; 2026 HEBEI XIAOZHONG MACHINERY MANUFACTURING CO., LTD. ALL RIGHTS RESERVED.</p>
     </footer>
 
-    <!-- Scripts -->
     <script src="assets/js/data.js"></script>
     <script>
-        let currentSlide = 0;
-        const slides = document.querySelectorAll('.hero-slide');
+        let currentSlide = 0; const slides = document.querySelectorAll('.hero-slide');
         function showSlide(index) { slides.forEach((slide, i) => { slide.style.opacity = (i === index) ? '1' : '0'; }); }
         function nextSlide() { currentSlide = (currentSlide + 1) % slides.length; showSlide(currentSlide); }
         function prevSlide() { currentSlide = (currentSlide - 1 + slides.length) % slides.length; showSlide(currentSlide); }
         setInterval(nextSlide, 5000);
 
-        let currentFactorySlide = 0;
-        const factorySlides = document.querySelectorAll('.factory-slide');
+        let currentFactorySlide = 0; const factorySlides = document.querySelectorAll('.factory-slide');
         function showFactorySlide(index) { factorySlides.forEach((slide, i) => { if (i === index) { slide.classList.add('active'); slide.style.opacity = '1'; } else { slide.classList.remove('active'); slide.style.opacity = '0'; } }); }
         function changeFactorySlide(step) { currentFactorySlide = (currentFactorySlide + step + factorySlides.length) % factorySlides.length; showFactorySlide(currentFactorySlide); }
 
         function showFaqTab(index) {
-            const tabs = document.querySelectorAll('.faq-tab-content');
-            const btns = document.querySelectorAll('.faq-btn');
-            tabs.forEach((tab, i) => tab.classList.toggle('active', i === index));
-            btns.forEach((btn, i) => btn.classList.toggle('active', i === index));
+            document.querySelectorAll('.faq-tab-content').forEach((tab, i) => tab.classList.toggle('active', i === index));
+            document.querySelectorAll('.faq-btn').forEach((btn, i) => btn.classList.toggle('active', i === index));
         }
 
         const grid = document.getElementById('product-grid');
         let currentFilter = 'ALL';
-        function filterBrand(brand) { currentFilter = brand; renderProducts(8); }
+        function filterBrand(brand) { 
+            currentFilter = brand; 
+            document.querySelectorAll('#inventory button').forEach(btn => {
+                if(btn.innerText.toUpperCase() === brand.toUpperCase()) { btn.classList.add('bg-orange-600', 'text-white'); btn.classList.remove('bg-white'); }
+                else { btn.classList.remove('bg-orange-600', 'text-white'); btn.classList.add('bg-white'); }
+            });
+            renderProducts(8); 
+        }
 
         function renderProducts(limit = null) {
-            grid.innerHTML = '';
-            let list = productData.excavators;
+            grid.innerHTML = ''; let list = productData.excavators;
             if (currentFilter !== 'ALL') { list = list.filter(item => item.brand.toUpperCase() === currentFilter.toUpperCase()); }
             const displayList = limit ? list.slice(0, limit) : list;
             displayList.forEach(item => {
                 const card = document.createElement('div');
                 card.className = "product-card bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-2xl border border-slate-100 transition-all duration-500 group";
-                card.innerHTML = `
-                    <div class="relative h-56 bg-slate-200 overflow-hidden">
-                        <img src="${item.image}" alt="${item.model}" class="product-img w-full h-full object-cover transition duration-700" onerror="this.src='https://via.placeholder.com/600x400?text=${item.brand}+${item.model}'">
-                        <div class="absolute top-4 left-4">
-                            <span class="bg-industrial-dark/80 backdrop-blur-md text-white text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-widest border border-white/10">
-                                ${item.year} MODEL
-                            </span>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="font-black text-xl mb-1 tracking-tighter uppercase group-hover:text-orange-600 transition-colors">${item.brand} ${item.model}</h3>
-                        <div class="flex space-x-4 text-[10px] font-black text-slate-400 uppercase tracking-widest mb-6">
-                            <span><i class="fas fa-history text-orange-500 mr-1.5"></i>${item.hours}H</span>
-                            <span><i class="fas fa-weight-hanging text-orange-500 mr-1.5"></i>${item.weight}</span>
-                        </div>
-                        <div class="border-t border-slate-50 pt-5 flex items-center justify-between">
-                            <div><p class="text-[9px] font-black text-slate-400 uppercase tracking-widest leading-none mb-1">Price from</p><span class="text-2xl font-black text-industrial-dark tracking-tighter">$${item.price.toLocaleString()}</span></div>
-                            <a href="https://wa.me/8619803129650" class="w-10 h-10 bg-slate-100 rounded-full flex items-center justify-center hover:bg-orange-600 hover:text-white transition-all duration-300"><i class="fas fa-arrow-right text-xs"></i></a>
-                        </div>
-                    </div>`;
+                card.innerHTML = `<div class="relative h-56 bg-slate-200 overflow-hidden"><img src="${item.image}" class="product-img w-full h-full object-cover transition duration-700" onerror="this.src='https://via.placeholder.com/600x400?text=${item.brand}+${item.model}'"><div class="absolute top-4 left-4"><span class="bg-industrial-dark/80 backdrop-blur-md text-white text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-widest border border-white/10">${item.year} MODEL</span></div></div><div class="p-6"><h3 class="font-black text-xl mb-1 tracking-tighter uppercase group-hover:text-orange-600 transition-colors">${item.brand} ${item.model}</h3><div class="flex space-x-4 text-[10px] font-black text-slate-400 uppercase tracking-widest mb-6"><span><i class="fas fa-history text-orange-500 mr-1.5"></i>${item.hours}H</span><span><i class="fas fa-weight-hanging text-orange-500 mr-1.5"></i>${item.weight}</span></div><div class="border-t border-slate-50 pt-5 flex items-center justify-between"><div><p class="text-[9px] font-black text-slate-400 uppercase tracking-widest leading-none mb-1">Price from</p><span class="text-2xl font-black text-industrial-dark tracking-tighter">$${item.price.toLocaleString()}</span></div><a href="https://wa.me/8619803129650" class="w-10 h-10 bg-slate-100 rounded-full flex items-center justify-center hover:bg-orange-600 hover:text-white transition-all duration-300"><i class="fas fa-arrow-right text-xs"></i></a></div></div>`;
                 grid.appendChild(card);
             });
-            const loadMoreBtn = document.getElementById('load-more-btn');
-            if (limit && list.length > limit) { loadMoreBtn.style.display = 'inline-block'; } else { loadMoreBtn.style.display = 'none'; }
+            const btn = document.getElementById('load-more-btn'); if (limit && list.length > limit) btn.style.display = 'inline-block'; else btn.style.display = 'none';
         }
         renderProducts(8);
     </script>
